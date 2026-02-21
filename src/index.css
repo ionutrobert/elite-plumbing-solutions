@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-accent: #F59E0B; /* Amber-500 */
+  --color-dark: #0A0A0A;
+  --color-dark-soft: #141414;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+  body {
+    @apply bg-dark text-white font-sans antialiased;
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-white to-white/60;
+}
+
